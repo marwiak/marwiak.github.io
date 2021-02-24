@@ -1,0 +1,150 @@
+
+*{
+padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Designer;
+    src: url(../fonts/Designer.otf) format("opentype");}
+
+@font-face{
+    font-family: Designer-Bold;
+    src: url(../fonts/Designer-Bold.otf) format("opentype");}
+
+@font-face{
+    font-family: Designer-Book;
+    src: url(../fonts/Designer-Book.otf) format("opentype");}
+
+@font-face {
+    font-family: Ikaros-Light;
+    src: url(../fonts/Ikaros-Light.otf) format("opentype");}
+@font-face {
+    font-family: Ikaros-Regular;
+    src: url(../fonts/Ikaros-Regular.otf) format("opentype");}
+
+.navbar{
+    font-family:Ikaros-Regular !important;
+    
+}
+body{
+    background-color: #141414;
+}
+
+#diylogodiv{
+    background-color: #141414;
+    padding-top:4%;
+    text-align: center;
+}
+#diylogo{
+    animation-name: logoanimation;
+    animation-duration: 6s;
+    
+
+}
+@keyframes logoanimation {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
+#schriftzug{
+   
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 4%;
+
+    width: 100%;
+    height: 100%;
+    background-color: #141414;
+    animation: fill 2s ease forwards 3s;
+}
+
+#schriftzug path:nth-child(1){
+    stroke-dasharray: 1895.2000732421875;
+    stroke-dashoffset: 1895.2000732421875;
+    animation: line-anim 2s ease forwards;
+   
+   }
+#schriftzug path:nth-child(2){
+   
+       stroke-dasharray: 760.97998046875; 
+       stroke-dashoffset: 760.97998046875;
+       animation: line-anim 2s ease forwards 0.3s;
+   }
+#schriftzug path:nth-child(3){
+       stroke-dasharray: 1239.750732421875;
+       stroke-dashoffset: 1239.750732421875;
+       animation: line-anim 2s ease forwards 0.6s;
+   }
+
+   @keyframes line-anim{
+    to {
+        stroke-dashoffset: 0;
+        }
+    }
+    @keyframes fill{
+        from{
+            fill:transparent;
+        }
+    to{
+    fill:white
+    }
+    
+    }
+
+#space{
+    background-color: #141414;
+     height: 10vh;
+}
+
+#flexwrapper{
+    background-color: #141414;
+}
+
+.flex-container{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.flex-item{
+    
+    border: 1px solid white;
+    margin-bottom: 3%;
+    margin-right: 2%;
+    position: relative;
+    display: flex;
+    width: 320px;
+    height: 320px;
+    background: url('/media/logo.png');
+    background-size: cover;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.kind{
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 320px;
+    padding: 24px;
+    background: rgba(0,0,0,0.8);
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.3s;
+    box-sizing: border-box;
+    border: 1px solid white;
+   }
+
+   .flex-item:hover .kind, .flex-item:active .kind{
+    opacity: 1;
+   }
+
+   .flex-item:hover{
+       transform: scale(1.03);
+   }

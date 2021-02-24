@@ -23,9 +23,7 @@ padding: 0px;
     font-family: Ikaros-Regular;
     src: url(../fonts/Ikaros-Regular.otf) format("opentype");}
 
-    body{
-        background-color: #141414;
-    }
+   
 .navbar{
     font-family:Ikaros-Regular !important;
     
@@ -129,18 +127,40 @@ p{
     
 
 .grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    background-color: #141414;
+    
+    /* grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); */
  
 }
 .card{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    overflow:hidden;
+    flex-basis:25%;
+    overflow: hidden;
+
 }
+@media screen and (max-width: 1200px) {
+    .card {
+     flex-basis: 33.33%;
+      overflow: hidden;
+    }
+  }
+
+@media screen and (max-width: 800px) {
+    .card {
+     flex-basis: 50%;
+      overflow: hidden;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .card {
+     flex-basis: 100%;
+      overflow: hidden;
+    }
+  }
+
 .test{
     text-decoration: none;
 }

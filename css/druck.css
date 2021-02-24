@@ -1,3 +1,31 @@
 *{
-    background-color: #141414;
-}
+    padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+            
+    }
+    
+    @font-face {
+        font-family: Designer;
+        src: url(../fonts/Designer.otf) format("opentype");}
+    
+    @font-face{
+        font-family: Designer-Bold;
+        src: url(../fonts/Designer-Bold.otf) format("opentype");}
+    
+    @font-face{
+        font-family: Designer-Book;
+        src: url(../fonts/Designer-Book.otf) format("opentype");}
+    
+    @font-face {
+        font-family: Ikaros-Light;
+        src: url(../fonts/Ikaros-Light.otf) format("opentype");}
+    @font-face {
+        font-family: Ikaros-Regular;
+        src: url(../fonts/Ikaros-Regular.otf) format("opentype");}
+    
+    .navbar{
+        font-family:Ikaros-Regular !important;
+        
+    }
+
